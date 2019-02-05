@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Friend Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-grid style="height: 100%" >
+        <ion-row justify-content-center align-items-center style="height: 100%" *ngIf="friend"> 
+  
+              <img  height="200px" src='{{ friend.picture }}'/>
+      
+              <ion-list >
+                <ion-item><strong>StudentId:</strong>{{ friend.studentID }}</ion-item>
+                <ion-item><strong>Firstname:</strong>{{ friend.firstname }}</ion-item>
+                <ion-item><strong>Lastname:</strong>{{ friend.lastname }}</ion-item>
+                <ion-item><strong>Nickname:</strong>{{ friend.nickname }}</ion-item>
+                <ion-item><strong>Faculty:</strong>{{ friend.faculty }}</ion-item>
+                <ion-item><strong>Major:</strong>{{ friend.major }}</ion-item>
+                <ion-item><strong>Birthday:</strong>{{friend.birthday|date:'dd/MM/yyyy' }}</ion-item>
+              </ion-list>
+              
+              <button ion-button full color="dark" (click)="gotoBack()" >
+                    Back
+            </button>  
+</ion-row>
+</ion-grid>
+</ion-content>
